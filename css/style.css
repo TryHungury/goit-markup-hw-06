@@ -787,6 +787,7 @@ main {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.25;
+    color: var(--color-background-other);
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
@@ -805,6 +806,7 @@ main {
     font-weight: 700;
     font-size: 16px;
     line-height: 1.875;
+    letter-spacing: 0.06em;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: 1px solid var(--color-accent);
@@ -825,11 +827,31 @@ main {
 }
 /* backdrop */
 .backdrop.is-hidden {
-    transform: scale(1);
+    transform: scale(1.2);
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
 }
+/* .is-hidden .modal {
+    transform: translate(-50%,-50%), scale(0.1);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+} */
+/* .backdrop .modal {
+    scale: 1;
+    transition: scale 10s linear,
+    visibility var(--default-transition),
+    opacity var(--default-transition);
+   
+    var(--default-transition);
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+} */
 .backdrop {
     position: fixed;
     top: 0;
@@ -840,8 +862,9 @@ main {
     cursor: not-allowed;
     visibility: visible;
     opacity: 1;
-    transform: scale(1.1);
-    transition: transform var(--default-transition),
+    /* transform: scale(1.1); */
+    transition: 
+    transform var(--default-transition),
     visibility var(--default-transition),
     opacity var(--default-transition);
     z-index: 2;
@@ -870,7 +893,10 @@ main {
     border-radius: 4px;
     cursor: auto;
     transform: translate(-50%,-50%);
+    /* scale: 1; */
+    /* transition: transform 10s linear; */
     overflow: auto;
+
 }
 .modal-icon-button {
     position: absolute;
@@ -981,7 +1007,7 @@ main {
     color: var(--color-secondary);
     font-style: normal;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.17;
     letter-spacing: 0.01em;
 }
@@ -1055,6 +1081,7 @@ main {
     height: 100%;
     font-style: normal;
     font-size: 16px;
+    font-weight: 700;
     line-height: 1.88;
     letter-spacing: 0.06em;
     color: var(--color-background-other);
